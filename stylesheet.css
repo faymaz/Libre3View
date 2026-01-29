@@ -1,0 +1,87 @@
+/* Libre3View Blood Glucose Monitor - Stylesheet */
+
+/* Panel box styling */
+.panel-status-menu-box {
+    spacing: 2px;
+}
+
+/* Icon styling */
+.libre3view-icon {
+    width: 16px;
+    height: 16px;
+    padding: 0;
+    margin: 0 1px;
+}
+
+/* Value container with border */
+.libre3view-value-container {
+    padding: 1px 2px;
+    border-radius: 4px;
+    margin: 1px 0;
+    height: 1.4em;
+    display: flex;
+    align-items: center;
+    border-width: 1px;
+    border-style: solid;
+}
+
+/* Value label */
+.libre3view-value {
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+}
+
+/* Trend arrows */
+.libre3view-trend {
+    font-size: 14px;
+    margin-left: 1px;
+    font-weight: bold;
+}
+
+/* Delta change */
+.libre3view-delta {
+    font-size: 12px;
+    margin-left: 1px;
+}
+
+/* Elapsed time */
+.libre3view-time {
+    font-size: 11px;
+    margin-left: 1px;
+    margin-right: 1px;
+}
+
+/* Error state styling */
+.libre3view-error {
+    color: #ff0000;
+}
+
+/* Menu item styling */
+.libre3view-menu-item {
+    padding: 8px;
+}
+
+.libre3view-menu-header {
+    font-weight: bold;
+    padding-top: 8px;
+}
+
+/* Refresh button hover states */
+.libre3view-refresh-button:hover {
+    background-color: rgba(64, 132, 214, 0.15);
+}
+
+.libre3view-refresh-button:active {
+    background-color: rgba(64, 132, 214, 0.25);
+}
+
+/* Settings button hover states */
+.libre3view-settings-button:hover {
+    background-color: rgba(64, 132, 214, 0.15);
+}
+
+.libre3view-settings-button:active {
+    background-color: rgba(64, 132, 214, 0.25);
+}

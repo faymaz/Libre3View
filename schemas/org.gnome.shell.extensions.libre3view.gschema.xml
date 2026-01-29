@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+    <schema id="org.gnome.shell.extensions.libre3view" path="/org/gnome/shell/extensions/libre3view/">
+        <!-- Data Source Selection -->
+        <key name="data-source" type="s">
+            <default>"libreview"</default>
+            <summary>Data Source</summary>
+            <description>CGM data source (libreview, dexcom, or nightscout)</description>
+        </key>
+
+        <!-- LibreView Credentials -->
+        <key name="libreview-email" type="s">
+            <default>""</default>
+            <summary>LibreView Email</summary>
+            <description>LibreView account email address</description>
+        </key>
+        <key name="libreview-password" type="s">
+            <default>""</default>
+            <summary>LibreView Password</summary>
+            <description>LibreView account password</description>
+        </key>
+        <key name="libreview-patient-id" type="s">
+            <default>""</default>
+            <summary>LibreView Patient ID</summary>
+            <description>Selected patient/connection ID for multi-patient accounts</description>
+        </key>
+        <key name="libreview-region" type="s">
+            <default>""</default>
+            <summary>LibreView Region</summary>
+            <description>LibreView/LibreLinkUp region override (e.g., DE, EU, US, AP). Leave empty for automatic detection.</description>
+        </key>
+
+        <!-- Dexcom Share Credentials -->
+        <key name="username" type="s">
+            <default>""</default>
+            <summary>Dexcom Username</summary>
+            <description>Dexcom Share account username</description>
+        </key>
+        <key name="password" type="s">
+            <default>""</default>
+            <summary>Dexcom Password</summary>
+            <description>Dexcom Share account password</description>
+        </key>
+        <key name="region" type="s">
+            <default>"Non-US"</default>
+            <summary>Dexcom Region</summary>
+            <description>Dexcom Share server region (US or Non-US)</description>
+        </key>
+
+        <!-- Dexcom Share Upload Settings -->
+        <key name="enable-dexcom-upload" type="b">
+            <default>false</default>
+            <summary>Enable Dexcom Share Upload</summary>
+            <description>Upload LibreView readings to Dexcom Share</description>
+        </key>
+        <key name="dexcom-upload-username" type="s">
+            <default>""</default>
+            <summary>Dexcom Upload Username</summary>
+            <description>Dexcom Share username for uploading data</description>
+        </key>
+        <key name="dexcom-upload-password" type="s">
+            <default>""</default>
+            <summary>Dexcom Upload Password</summary>
+            <description>Dexcom Share password for uploading data</description>
+        </key>
+        <key name="dexcom-upload-region" type="s">
+            <default>"Non-US"</default>
+            <summary>Dexcom Upload Region</summary>
+            <description>Dexcom Share region for uploading data</description>
+        </key>
+
+        <!-- Dexcom Share Mirror (Dexcom → second Dexcom account) -->
+        <key name="enable-dexcom-upload-2" type="b">
+            <default>false</default>
+            <summary>Enable Dexcom Share Mirror</summary>
+            <description>Mirror Dexcom readings to a second Dexcom Share account (different region)</description>
+        </key>
+        <key name="dexcom-upload-username-2" type="s">
+            <default>""</default>
+            <summary>Dexcom Mirror Username</summary>
+            <description>Dexcom Share username for mirror account</description>
+        </key>
+        <key name="dexcom-upload-password-2" type="s">
+            <default>""</default>
+            <summary>Dexcom Mirror Password</summary>
+            <description>Dexcom Share password for mirror account</description>
+        </key>
+        <key name="dexcom-upload-region-2" type="s">
+            <default>"US"</default>
+            <summary>Dexcom Mirror Region</summary>
+            <description>Dexcom Share region for mirror account (US or Non-US)</description>
+        </key>
+
+        <!-- Nightscout Settings -->
+        <key name="nightscout-url" type="s">
+            <default>""</default>
+            <summary>Nightscout URL</summary>
+            <description>Your Nightscout site URL (e.g., https://your-site.herokuapp.com)</description>
+        </key>
+        <key name="nightscout-api-secret" type="s">
+            <default>""</default>
+            <summary>Nightscout API Secret</summary>
+            <description>Your Nightscout API secret (minimum 12 characters)</description>
+        </key>
+        <!-- TLS/SSL Settings (compatible with nightwatcher) -->
+        <key name="skip-tls-verification" type="b">
+            <default>false</default>
+            <summary>Skip TLS Certificate Verification</summary>
+            <description>Disable SSL/TLS certificate validation for self-signed certificates (WARNING: Less secure)</description>
+        </key>
+
+        <!-- Units and Update Settings -->
+        <key name="unit" type="s">
+            <default>"mg/dL"</default>
+            <summary>Glucose Unit</summary>
+            <description>Glucose unit (mg/dL or mmol/L)</description>
+        </key>
+        <key name="update-interval" type="i">
+            <default>60</default>
+            <summary>Update Interval</summary>
+            <description>How often to update the glucose value (in seconds)</description>
+        </key>
+
+        <!-- Thresholds -->
+        <key name="urgent-high-threshold" type="i">
+            <default>240</default>
+            <summary>Urgent High Threshold</summary>
+            <description>Threshold for urgent high glucose warning (in mg/dL)</description>
+        </key>
+        <key name="high-threshold" type="i">
+            <default>180</default>
+            <summary>High Threshold</summary>
+            <description>Threshold for high glucose warning (in mg/dL)</description>
+        </key>
+        <key name="low-threshold" type="i">
+            <default>90</default>
+            <summary>Low Threshold</summary>
+            <description>Threshold for low glucose warning (in mg/dL)</description>
+        </key>
+        <key name="urgent-low-threshold" type="i">
+            <default>70</default>
+            <summary>Urgent Low Threshold</summary>
+            <description>Threshold for urgent low glucose warning (in mg/dL)</description>
+        </key>
+
+        <!-- Display Settings -->
+        <key name="show-delta" type="b">
+            <default>true</default>
+            <summary>Show Delta</summary>
+            <description>Show glucose value change</description>
+        </key>
+        <key name="show-trend-arrows" type="b">
+            <default>true</default>
+            <summary>Show Trend Arrows</summary>
+            <description>Show glucose trend direction arrows</description>
+        </key>
+        <key name="show-elapsed-time" type="b">
+            <default>true</default>
+            <summary>Show Elapsed Time</summary>
+            <description>Show time since last reading</description>
+        </key>
+        <key name="show-icon" type="b">
+            <default>true</default>
+            <summary>Show Icon</summary>
+            <description>Show or hide the icon in the panel</description>
+        </key>
+        <key name="icon-position" type="s">
+            <default>"left"</default>
+            <summary>Icon Position</summary>
+            <description>Position of the icon relative to the text (left or right)</description>
+        </key>
+
+        <!-- Debug Settings -->
+        <key name="enable-debug-logs" type="b">
+            <default>false</default>
+            <summary>Enable Debug Logs</summary>
+            <description>Enable debug logging for troubleshooting</description>
+        </key>
+
+        <!-- Colors -->
+        <key name="urgent-high-color" type="s">
+            <default>"#FF0000"</default>
+            <summary>Urgent High Color</summary>
+            <description>Color for urgent high glucose values</description>
+        </key>
+        <key name="high-color" type="s">
+            <default>"#FFA500"</default>
+            <summary>High Color</summary>
+            <description>Color for high glucose values</description>
+        </key>
+        <key name="normal-color" type="s">
+            <default>"#00FF00"</default>
+            <summary>Normal Color</summary>
+            <description>Color for normal glucose values</description>
+        </key>
+        <key name="low-color" type="s">
+            <default>"#FFA500"</default>
+            <summary>Low Color</summary>
+            <description>Color for low glucose values</description>
+        </key>
+        <key name="urgent-low-color" type="s">
+            <default>"#FF0000"</default>
+            <summary>Urgent Low Color</summary>
+            <description>Color for urgent low glucose values</description>
+        </key>
+    </schema>
+</schemalist>
